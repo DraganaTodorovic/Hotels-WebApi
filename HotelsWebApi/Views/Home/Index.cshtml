@@ -1,0 +1,191 @@
+﻿@section Scripts {
+    @Scripts.Render("~/Scripts/Skripta.js")
+}
+
+
+<div class="row" style="margin:auto; width:1100px">
+    <br />
+    <div style="text-align:right" class="form-group" id="btns">
+        <button id="regBtn" class="btn btn-default" style="background-color:yellow; color:black; width:150px">Registracija</button>
+        <span id="spanBtns"><button id="prijavaBtn" class="btn btn-default" style="margin-right:60px; width:150px">Prijava</button></span>
+        <br />
+    </div>
+
+    <div id="registracijaDiv" class="row" style="margin:auto">
+        <form method="post" action="post/" id="do_registration">
+            <div style="text-align:center" class="form-group">
+                <h4 id="info_pocetak" style="text-align:center">Registracija korisnika</h4>
+            </div>
+            <br />
+            <div class="row form-group" style="margin:auto; width:400px">
+                <label class="text-left">Korisnicko ime:</label>
+                <input style="float:right; width:200px" class="form-control col-sm-6" type="text" id="regEmail" />
+            </div>
+            <br />
+            <div class="row form-group" style="margin:auto; width:400px">
+                <label class="text-left">Lozinka:</label>
+                <input style="float:right; width:200px" class="form-control col-sm-6" type="password" id="regLoz" />
+            </div>
+            <br />
+            <div class="row form-group" style="margin:auto; width:400px">
+                <label class="text-left">Potvrdi Lozinku:</label>
+                <input style="float:right; width:200px" class="form-control col-sm-6" type="password" id="regLoz2" />
+            </div>
+            <br />
+            <div style="text-align:center" class="form-group">
+                <input id="odustajanjeResistracijaBtn" type="button" class="btn btn-default" style="background-color:yellow; color:black" value="Odustajanje" />
+                <button type="submit" id="registrujBtn" class="btn btn-default" style="margin-left:60px">Registracija</button>
+            </div>
+        </form>
+
+        <div style="text-align:center" class="form-group" id="uspesna_registracija">
+            <br />
+            <h4 id="info_pocetak" style="text-align:center"><b>Uspesna registracija na sistem</b></h4>
+            <div class="form-group">
+                <button style="width: 150px" id="prijava_na_sistemBtn" class="btn btn-default">Prijava na sistem</button>
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <div id="loginDiv" class="row" style="margin:auto">
+        <form method="post" action="post/" id="do_prijava">
+            <div style="text-align:center" class="form-group">
+                <h4 id="info_pocetak" style="text-align:center">Prijava korisnika</h4>
+            </div>
+            <br />
+            <div class="row form-group" style="margin:auto; width:400px">
+                <label class="text-left">Korisnicko ime:</label>
+                <input style="float:right; width:200px" class="form-control col-sm-6" type="text" id="loginEmail" />
+            </div>
+            <br />
+            <div class="row form-group" style="margin:auto; width:400px">
+                <label class="text-left">Lozinka:</label>
+                <input style="float:right; width:200px" class="form-control col-sm-6" type="password" id="loginPass" />
+            </div>
+            <br />
+            <div style="text-align:center" class="form-group">
+                <input id="odustajanjePrijavaBtn" type="button" class="btn btn-default" style="background-color:yellow; color:black" value="Odustajanje" />
+                <button type="submit" id="loginBtn" class="btn btn-default" style="margin-left:60px">Prijava</button>
+            </div>
+        </form>
+        <div class="text-left col-md-8" style="color:blue; text-align:center">
+            <p id="info"></p>
+        </div>
+    </div>
+
+</div>
+
+<br />
+<div class="row" style="margin:auto; width:1100px">
+    <div class="text-left col-md-6">
+        <p id="loggedInParagraph"></p>
+    </div>
+    <div class="text-right col-md-6" id="logoutDiv">
+        <button type="button" class="btn btn-default" style="background-color:yellow; color:black" id="logoutBtn">Odjava</button>
+    </div>
+</div>
+<br />
+
+<div>
+    <div class="row hidden text-center" id="search" style="margin:auto; float:left; width:300px">
+        <br />
+        <h4>Pretraga po kapacitetu:</h4>
+        <br />
+        <label class="col-form-label col-sm-3" style="width: 150px; float: left" for="minSoba">Najmanje soba: </label>
+        <input class="form-control col-sm-3" type="text" id="findInput1" style="width:150px; float:right" />
+        <br />
+        <br />
+        <label class="col-form-label col-sm-3" style="width: 150px; float: left" for="maxSoba">Najvise soba: </label>
+        <input class="form-control col-sm-3" type="text" id="findInput2" style="width:150px; float:right" />
+        <br />
+        <br />
+        <button id="findBtn" class="btn btn-default" style="margin:auto; width:150px">Pretraga</button>
+    </div>
+
+    <div class="row text-center" id="show_info" style="margin:auto; float:right; width:600px">
+        <br />
+        <h4>Hotelski lanci sa najduzom tradicijom:</h4>
+        <br />
+        <button id="tradicijaBtn" class="btn btn-default" style="margin:auto; width:200px">Ucitavanje</button>
+        <br />
+        <p id="pFirst"></p>
+        @*<br />*@
+        <p id="pSecond"></p>
+        <br />
+        <br />
+    </div>
+</div>
+<br />
+
+<div>
+    @*<hr />*@
+    <div id="data" class="row text-center" style="margin:auto; float:right; width:800px">
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row text-center" style="margin:auto">
+    @*<hr />*@
+    <form method="post" action="post/" id="create" style="margin: auto; width:400px">
+        <h4>Dodavanje novog hotela</h4>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="lanac" style="float:left">Lanac: </label>
+            <select class="form-control col-sm-4" id="createInput4select" style="width: 200px; float: right"></select>
+            <br />
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="naziv" style="float:left">Naziv: </label>
+            <input class="form-control col-sm-6" type="text" id="createInput1" style="width: 100px; float: right; text-align:left" />
+            <br />
+            <p id="validationMsgInput1" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="godina" style="float:left">Godina otvaranja: </label>
+            <input class="form-control col-sm-4" type="number" id="createInput3" style="width: 200px; float: right; text-align:left" />
+            <br />
+            <p id="validationMsgInput3" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="sobe" style="float:left">Broj soba: </label>
+            <input class="form-control col-sm-4" type="number" step="1" id="createInput2" style="width:100px; float:right; text-align:right" />
+            <br />
+            <p id="validationMsgInput2" style="color:red"></p>
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="col-sm-6 col-form-label text-left" for="zaposleni" style="float:left">Broj zaposlenih: </label>
+            <input class="form-control col-sm-4" type="number" id="createInput5" style="width: 100px; float: right; text-align:right" />
+            <br />
+            <p id="validationMsgInput5" style="color:red"></p>
+        </div>
+        <br />
+        <br />
+        <div class="row form-group" style="margin:auto; width:300px">
+            <input id="giveUpBtn" type="button" class="btn btn-default" style="background-color:yellow; color:black" value="Odustajanje" />
+            <button type="submit" class="btn btn-default" style="margin-left:60px">Dodavanje</button>
+
+            @*<button type="submit" class="btn btn-default" style="width:120px; float:left; color:black; background-color: yellow">Izmena</button>
+                <input id="giveUpBtn" type="button" class="btn btn-default" style="width: 120px; float:right" value="Odustajanje" />*@
+        </div>
+    </form>
+
+</div>
+
